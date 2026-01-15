@@ -1,5 +1,3 @@
-# CT6045
-
 Requirments:
 Hortonworks Data Platform (HDP) version 2.6.5
 In CT6045\data\DatasetReduction\ | Use ReviewsCleaning.py and NYCTaxiCleaning.py on AmazonReviews and NYCTaxi to create cleaned dataset
@@ -47,11 +45,10 @@ hive -f hive/taxi_fare.hql
 hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar -files mapper.py,reducer.py -mapper "python2 mapper.py" -reducer "python2 reducer.py" -input /user/ct6045/amazon/cleaned -output /user/ct6045/results/word_sentiment
 
 5 - Run the Local Python Scripts using their Venv:
-CT6045\nlp+sentament\\main.py
-CT6045\nlp+sentament\nlpsentament\sentament.py
+CT6045\nlp+sentament\nlp+sentament\main.py
+CT6045\nlp+sentament\nlp+sentament\sentament.py
 CT6045\Pyspark\main.py
 CT6045\graphs\main/py
-
 
 
 
