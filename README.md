@@ -44,7 +44,7 @@ hive -f hive/taxi_fare.hql
 4 - run MAP Reducer
 hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar -files mapper.py,reducer.py -mapper "python2 mapper.py" -reducer "python2 reducer.py" -input /user/ct6045/amazon/cleaned -output /user/ct6045/results/word_sentiment  
 
-5 - Run the Local Python Scripts using their Venv:
+5 - Run the Local Python Scripts, using the cleaned datasets as required:
 CT6045\nlp+sentament\nlp+sentament\main.py  
 CT6045\nlp+sentament\nlp+sentament\sentament.py  
 CT6045\Pyspark\main.py  
